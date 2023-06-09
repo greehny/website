@@ -1,0 +1,34 @@
+@font-face {
+    font-family: lemonmilkreg;
+    src: url("./fonts/LEMONMILK-RegularItalic.otf");
+  }
+
+  @font-face {
+    font-family: lemonmilkthin;
+    src: url("./fonts/LEMONMILK-LightItalic.otf");
+  }
+
+  
+
+  .main{
+    font-size: 50px;
+    font-family: lemonmilkreg;
+    text-align: center;
+    padding: 200px 0;
+    color: white
+  }
+
+  .undermain{
+    font-size: 20px;
+    text-align: center;
+    font-family: lemonmilkreg;
+  }
+
+  footer {
+    font-family: lemonmilkthin;
+    color: white;
+    font-size: 12px;
+  }
+  
+
+  body {background-color: #000000;}
