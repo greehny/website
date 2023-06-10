@@ -8,27 +8,130 @@
     src: url("./fonts/LEMONMILK-LightItalic.otf");
   }
 
-  
+  @font-face {
+    font-family: mon;
+    src: url("./fonts/Montserrat-Regular.ttf");
+  }
 
   .main{
-    font-size: 50px;
-    font-family: lemonmilkreg;
     text-align: center;
-    padding: 200px 0;
-    color: white
+    padding: 270px 0;
   }
 
-  .undermain{
-    font-size: 20px;
-    text-align: center;
+  .grhn {
+    font-size: 100px;
     font-family: lemonmilkreg;
-  }
-
-  footer {
-    font-family: lemonmilkthin;
+    text-align: center;
     color: white;
-    font-size: 12px;
+  } 
+
+  .disc {
+    height: 40px;
+    transition: all .4s ease;
+    text-align: center;
+  }
+
+  .disc:hover {
+     filter: drop-shadow(0px 0px 5px rgba(192, 192, 192, 0.5));
+     -webkit-filter: drop-shadow(0px 0px 5px rgba(192, 192, 192, 0.5));
+     transition: all .4s ease;
+  }
+
+  .twit {
+    height: 40px;
+    transition: all .4s ease;
+    text-align: center;
+  }
+
+  .twit:hover {
+    filter: drop-shadow(0px 0px 5px rgba(192, 192, 192, 0.7));
+     -webkit-filter: drop-shadow(0px 0px 5px rgba(192, 192, 192, 0.5));
+     transition: all .4s ease;
+  }
+
+  .github {
+    height: 40px;
+    transition: all .4s ease;
+    text-align: center;
+  }
+
+  .github:hover {
+    filter: drop-shadow(0px 0px 5px rgba(192, 192, 192, 0.5));
+     -webkit-filter: drop-shadow(0px 0px 5px rgba(192, 192, 192, 0.5));
+     transition: all .4s ease;
+  }
+
+ .anim{
+  background: linear-gradient(
+      to right,
+      #cd5353 20%,
+      #fa9600 30%,
+      #01cd0b 70%,
+      #4a64da 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+  }
+
+  @keyframes textShine {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
   }
   
+  footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+    font-family: mon;
+    text-align: center;
+    color: white;
+  }
 
-  body {background-color: #000000;}
+  body {background-color: #131313;}
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: visible;
+    width: 250px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-family: mon;
+    
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 0;
+    top: 6px;
+    right: 150%;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%; /* To the right of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgb(255, 255, 255);
+  }
