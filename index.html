@@ -2,22 +2,33 @@
 <html>
   <head>
     <title>greehn</title>
-    <link rel="stylesheet" type="text/css" href="greehn.css">
+    <link rel="stylesheet" type="text/css" href="gang.css">
+    <meta charset="UTF-8">
   </head>
   <body>
     <header>
-      <div class="logo">
-      </div>
-      <nav></nav>
-      </nav>
     </header>
     <div class="main">
-      <h1>greehn.xyz</h1>
-      <p>coming soon</p>
-      <iframe src="https://open.spotify.com/embed/track/5aqUqSq0SqGBAqEn27PEzc?si=6454a667bd954a29" width="400" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <h1 class="grhn">greehn.<span class="anim">xyz</span></h1>
+      <div class="socials">
+        <div class="tooltip" id="tooltip">
+          <input type="image" onclick="onDiscClick()" class="disc" src="./images/discord.png" />
+          <span class="tooltiptext" id="tooltiptext">Copied Discord handle!</span>
+        </div>
+        <a href="https://twitter.com/greehno" target="_blank"><img class="twit" src="./images/twitter-xxl.png"></a>
+        <a href="https://github.com/greehny" target="_blank"><img class="github" src="./images/github.png"></a>
+      </div>
     </div>
     <footer>
       <p>&copy; 2023 greehn. All rights reserved.</p>
     </footer>
+    <script>
+      function onDiscClick() {
+        navigator.clipboard.writeText("greehn")
+        const target = document.getElementById("tooltiptext")
+        target.style.opacity = '1';
+        setTimeout(() => { target.style.opacity = '0'; }, 4000);
+      }
+    </script>
   </body>
 </html>
