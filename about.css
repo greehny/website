@@ -104,14 +104,14 @@
   }
   
  .main h3{
-    font-size: 18px;
-    font-family: boldmon;
+    font-size: 23px;
+    font-family: boldmonit;
     text-align: center;
     color: white;
-    margin-bottom:20px;
+    padding:10px 20px;
  }
 
- .main h4{
+ .main h5{
     font-size: 13px;
     font-family: mon;
     text-align: center;
