@@ -13,6 +13,58 @@
     src: url("./fonts/Montserrat-Regular.ttf");
   }
 
+  @font-face {
+    font-family: boldmonit;
+    src: url(./fonts/Montserrat-BoldItalic.ttf);
+  }
+
+
+  .navlist {
+    font-size: 15px;
+    font-family: mon;
+    text-align: center;
+    color: white;
+    height:px;
+    list-style-type: none;
+  }
+
+  .navlist li {
+    display:inline-block;
+    display: inline;
+    padding: 0px 1px;
+    margin-right:10px;
+  }
+
+  .navlist a {
+    padding: 3px ;
+    background-color: #131313;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    }
+
+  .navlist a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #FFF;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+
+  .navlist a.active::after {
+    transform: scaleX(1);
+  }
+
+  .navlist a:hover::after {
+  transform: scaleX(1);
+  }
+
+
   .main{
     text-align: center;
     padding: 270px 0;
@@ -20,10 +72,17 @@
 
   .grhn {
     font-size: 100px;
-    font-family: lemonmilkreg;
+    font-family: boldmonit;
     text-align: center;
     color: white;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
   } 
+
+  .socials{
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+  }
 
   .disc {
     height: 40px;
@@ -104,7 +163,6 @@
     display: inline-block;
   }
   
-  /* Tooltip text */
   .tooltip .tooltiptext {
     visibility: visible;
     width: 250px;
@@ -115,8 +173,6 @@
     border-radius: 6px;
     font-family: mon;
     
-   
-    /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 0;
     top: 6px;
@@ -129,9 +185,41 @@
     content: " ";
     position: absolute;
     top: 50%;
-    left: 100%; /* To the right of the tooltip */
+    left: 100%;
     margin-top: -5px;
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent transparent rgb(255, 255, 255);
+  }
+
+  .animate {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  @-webkit-keyframes fadeInDown {
+  0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -10%, 0);
+      transform: translate3d(0, -10%, 0);
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+  }
+  }
+  @keyframes fadeInDown {
+  0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -10%, 0);
+      transform: translate3d(0, -10%, 0);
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+  }
   }
