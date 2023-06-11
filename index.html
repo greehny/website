@@ -7,10 +7,16 @@
   </head>
   <body>
     <header>
+      <nav>
+        <ul class="navlist">
+          <li><a class="active" href="index.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+        </ul>
+      </nav>
     </header>
     <div class="main">
-      <h1 class="grhn">greehn.<span class="anim">xyz</span></h1>
-      <div class="socials">
+      <h1 class="animate grhn">greehn.<span class="anim">xyz</span></h1>
+      <div class="animate socials">
         <div class="tooltip" id="tooltip">
           <input type="image" onclick="onDiscClick()" class="disc" src="./images/discord.png" />
           <span class="tooltiptext" id="tooltiptext">Copied Discord handle!</span>
@@ -27,7 +33,7 @@
         navigator.clipboard.writeText("greehn")
         const target = document.getElementById("tooltiptext")
         target.style.opacity = '1';
-        setTimeout(() => { target.style.opacity = '0'; }, 4000);
+        setTimeout(() => { target.style.opacity = '0'; }, 2000);
       }
     </script>
   </body>
