@@ -1,0 +1,195 @@
+@font-face {
+    font-family: lemonmilkreg;
+    src: url("./fonts/LEMONMILK-RegularItalic.otf");
+  }
+
+  @font-face {
+    font-family: lemonmilkthin;
+    src: url("./fonts/LEMONMILK-LightItalic.otf");
+  }
+
+  @font-face {
+    font-family: mon;
+    src: url("./fonts/Montserrat-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: boldmonit;
+    src: url(./fonts/Montserrat-BoldItalic.ttf);
+  }
+
+  @font-face {
+    font-family: boldmon;
+    src: url("./fonts/Montserrat-Bold.ttf");
+  }
+
+  .navlist {
+    font-size: 15px;
+    font-family: mon;
+    text-align: center;
+    color: white;
+    height:px;
+    list-style-type: none;
+  }
+
+  .navlist li {
+    display:inline-block;
+    display: inline;
+    padding: 0px 1px;
+    margin-right:10px;
+  }
+
+  .navlist a {
+    padding: 3px ;
+    background-color: #131313;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    }
+
+  .navlist a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #FFF;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+
+  .navlist a.active::after {
+    transform: scaleX(1);
+  }
+
+  .navlist a:hover::after {
+  transform: scaleX(1);
+  }
+
+  .title {
+    font-size: 30px;
+    font-family: boldmonit;
+    text-align: center;
+    color: white;
+    padding: 100px 1px;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+  }
+
+  .card-container {
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+
+  
+  
+  @media (max-width: 768px) {
+    .card {
+      flex-basis: 100%;
+      margin: 20px 0;
+    }
+  }
+
+  .main {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+  }
+  
+ .main h3{
+    font-size: 18px;
+    font-family: boldmon;
+    text-align: center;
+    color: white;
+    margin-bottom:20px;
+ }
+
+ .main h4{
+    font-size: 13px;
+    font-family: mon;
+    text-align: center;
+    color: white;
+ }
+
+ .main a {
+    padding: 3px ;
+    background-color: #131313;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    background: linear-gradient(
+      to right,
+      #cd5353 20%,
+      #fa9600 30%,
+      #01cd0b 70%,
+      #4a64da 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+ }
+
+ @keyframes textShine {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+
+  footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+    font-family: mon;
+    text-align: center;
+    color: white;
+  }
+
+  body {background-color: #131313;}
+
+  .animate {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  @-webkit-keyframes fadeInDown {
+  0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -10%, 0);
+      transform: translate3d(0, -10%, 0);
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+  }
+  }
+  @keyframes fadeInDown {
+  0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -10%, 0);
+      transform: translate3d(0, -10%, 0);
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+  }
+  }
